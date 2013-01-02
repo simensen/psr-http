@@ -1,0 +1,17 @@
+{
+    "name":"psr/http",
+    "description":"Common interfaces for HTTP messages",
+    "keywords":["psr", "http"],
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"PHP-FIG",
+            "homepage":"http://www.php-fig.org/"
+        }
+    ],
+    "autoload":{
+        "psr-0":{
+            "Psr\\Http":"src/"
+        }
+    }
+}
