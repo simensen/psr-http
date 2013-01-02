@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit colors="false" bootstrap="tests/bootstrap.php">
+<phpunit bootstrap="./tests/bootstrap.php">
     <testsuites>
         <testsuite name="PSR HTTP Test Suite">
-            <directory suffix="Test.php">./Tests/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
     <filter>
