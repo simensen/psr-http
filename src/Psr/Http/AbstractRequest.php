@@ -60,7 +60,13 @@ abstract class AbstractRequest extends AbstractMessage implements RequestInterfa
      */
     public function getUrl()
     {
-        return http_build_url('', $this->url);
+        return (null !== $this->url['scheme'] ? $this->url['scheme'] . '://' : '')
+            . (null !== $this->url['user'] ? $this->url['user'] . ((isset($this->url['pass'])) ? ':' . $this->url['pass'] : '') . '@' : '')
+            . (null !== $this->url['host'] ? $this->url['host'] : '')
+            . (null !== $this->url['port'] ? ':' . $this->url['port'] : '')
+            . (null !== $this->url['path'] ? $this->url['path'] : '')
+            . (null !== $this->url['query'] ? '?' . $this->url['query'] : '')
+            . (null !== $this->url['fragment'] ? '#' . $this->url['fragment'] : '');
     }
 
     protected function getPath()
